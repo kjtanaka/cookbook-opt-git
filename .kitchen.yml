@@ -14,5 +14,10 @@ platforms:
 suites:
   - name: default
     run_list:
-      - recipe[opt-git::default]
+      - recipe[opt-git]
+    attributes: {}
+  - name: modulefile
+    run_list:
+      - recipe[opt-modules]
+      - recipe[opt-git::modulefile]
     attributes: {}
